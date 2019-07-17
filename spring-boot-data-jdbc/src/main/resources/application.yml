@@ -1,0 +1,27 @@
+#设置数据源
+spring:
+  datasource:
+    username: root
+    password: 123456
+    #com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jdbc
+    #选择指定的数据库连接池
+    type: com.alibaba.druid.pool.DruidDataSource
+    #schema:
+    #  - classpath:department.sql
+    #如果需要载入上述的sql文件需要设置该参数
+    #initialization-mode: always
+    #   数据源其他配置
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+
