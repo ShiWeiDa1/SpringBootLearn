@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/springboot_cache
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: localhost
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #开启驼峰命名
+logging:
+  level:
+    com.swd.springboot.mapper: debug #将包下的类进行打印日志
+#打印日志
+#debug: true
