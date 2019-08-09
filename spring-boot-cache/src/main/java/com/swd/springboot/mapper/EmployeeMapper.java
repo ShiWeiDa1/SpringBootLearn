@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 public interface EmployeeMapper {
 
     /**
-     * 获取员工信息
+     * 根据员工编号获取员工信息
      * @param id
      * @return
      */
@@ -27,7 +27,7 @@ public interface EmployeeMapper {
     public void updateEmp(Employee employee);
 
     /**
-     * 删除员工
+     * 根据员工编号删除员工
      * @param id
      */
     @Delete("delete from employee where id = #{id}")
@@ -41,6 +41,11 @@ public interface EmployeeMapper {
     @Insert("insert into employee (lastName,email,gender,d_id)values (#{lastName},#{email},#{gender},#{dId})")
     public void insertEmp(Employee employee);
 
+    /**
+     * 根据用户名获取员工信息
+     * @param lastName
+     * @return
+     */
     @Select("select * from employee where lastName=#{lastName}")
     Employee getEmpByLastName(String lastName);
 }
