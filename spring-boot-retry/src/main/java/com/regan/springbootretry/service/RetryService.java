@@ -18,11 +18,20 @@ import org.springframework.stereotype.Service;
 public class RetryService {
     @Retryable(value = Exception.class, backoff = @Backoff(delay = 500, multiplier = 2))
     public String retry() {
+        // if (true) {
+        // throw new RuntimeException();
+        // }
+        return "retry";
+    }
+
+    @Retryable(value = Exception.class, backoff = @Backoff(delay = 500, multiplier = 2))
+    public String retry2() {
         if (true) {
             throw new RuntimeException();
         }
         return "retry";
     }
+
 
     /**
      *<pre>
@@ -32,8 +41,10 @@ public class RetryService {
      * @return
      */
     @Recover
-    public String recover(RuntimeException e) {
-        log.info("####");
+    private String recover(RuntimeException e) {
+        log.info("##  recover {} ##", e.getMessage());
+
         return "recover";
     }
+
 }
