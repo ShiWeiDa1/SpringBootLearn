@@ -1,0 +1,20 @@
+<configuration>
+    <!--自定义变量-->
+    <property name="USER_NAME" value="/data/logs"/>
+    <!--    从文件中读取变量-->
+    <property file="F:\project\logback-examples\src\main\resources\variables1.properties"/>
+    <!-- 从资源文件中读取变量   -->
+    <property resource="resource1.properties"/>
+
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${USER_NAME}/myApp.log</file>
+        <encoder>
+            <pattern>%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>
