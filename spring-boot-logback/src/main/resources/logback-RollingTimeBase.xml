@@ -1,0 +1,31 @@
+<configuration>
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logFile.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 			按天轮转 -->
+            <fileNamePattern>logFile.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- 			保存 30 天的历史记录，最大大小为 30GB -->
+            <!--
+                这个可选的属性用来控制最多保留多少数量的归档文件，将会异步删除旧的文件。
+                比如，你指定按月轮转，指定 maxHistory = 6，
+                那么 6 个月内的归档文件将会保留在文件夹内，大于 6 个月的将会被删除。
+                注意：当旧的归档文件被移除时，当初用来保存这些日志归档文件的文件夹也会在适当的时候被移除。
+             -->
+            <maxHistory>30</maxHistory>
+            <!--
+               这个可选属性用来控制所有归档文件总的大小。当达到这个大小后，
+               旧的归档文件将会被异步的删除。使用这个属性时还需要设置 maxHistory 属性。
+               而且，maxHistory 将会被作为第一条件，该属性作为第二条件。
+           -->
+            <totalSizeCap>30GB</totalSizeCap>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="DEBUG">
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>
