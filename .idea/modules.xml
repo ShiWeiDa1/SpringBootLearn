@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/SpringBootLearn.iml" filepath="$PROJECT_DIR$/.idea/SpringBootLearn.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-logback/spring-boot-logback.iml" filepath="$PROJECT_DIR$/spring-boot-logback/spring-boot-logback.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-resttemplate/spring-boot-resttemplate.iml" filepath="$PROJECT_DIR$/spring-boot-resttemplate/spring-boot-resttemplate.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-retry/spring-boot-retry.iml" filepath="$PROJECT_DIR$/spring-boot-retry/spring-boot-retry.iml" />
     </modules>
   </component>
