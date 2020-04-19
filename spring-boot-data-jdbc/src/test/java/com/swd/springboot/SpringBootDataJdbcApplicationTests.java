@@ -25,7 +25,7 @@ public class SpringBootDataJdbcApplicationTests {
         try {
             Connection connection = dataSource.getConnection();
             System.out.println(connection);
-        }catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
 

@@ -29,7 +29,7 @@ public class DruidConfig {
      */
     @ConfigurationProperties(prefix = "spring.datasource")
     @Bean
-    public DataSource getDruid(){
+    public DataSource getDruid() {
         return new DruidDataSource();
     }
 
@@ -39,30 +39,28 @@ public class DruidConfig {
      * @return
      */
     @Bean
-    public ServletRegistrationBean statViewServlet(){
+    public ServletRegistrationBean statViewServlet() {
         ServletRegistrationBean<StatViewServlet> bean = new ServletRegistrationBean<>(new StatViewServlet(), "/druid/*");
         //设置StatViewServlet的初始化参数
         Map<String, String> initParameters = new HashMap<>();
-        initParameters.put("loginUsername","admin");
-        initParameters.put("loginPassword","admin");
-        initParameters.put("allow","");
+        initParameters.put("loginUsername", "admin");
+        initParameters.put("loginPassword", "admin");
+        initParameters.put("allow", "");
 
         bean.setInitParameters(initParameters);
         return bean;
     }
 
     @Bean
-    public FilterRegistrationBean  webStatFilter(){
+    public FilterRegistrationBean webStatFilter() {
         FilterRegistrationBean<Filter> bean = new FilterRegistrationBean<>();
         bean.setFilter(new WebStatFilter());
         Map<String, String> initParameters = new HashMap<>();
-        initParameters.put("exclusions","/druid/*,*.css,*.js");
+        initParameters.put("exclusions", "/druid/*,*.css,*.js");
         bean.setInitParameters(initParameters);
         bean.setUrlPatterns(Arrays.asList("/*"));
         return bean;
     }
-
-
 
 
 }

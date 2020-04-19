@@ -41,7 +41,7 @@ public class SpringBootCacheApplicationTests {
      *         stringRedisTemplate.opsForHash();
      */
     @Test
-    public void test01(){
+    public void test01() {
         //stringRedisTemplate.opsForValue().append("msg","hello");
         String msg = stringRedisTemplate.opsForValue().get("msg");
         System.out.println(msg);
@@ -51,14 +51,14 @@ public class SpringBootCacheApplicationTests {
      * 测试保存对象
      */
     @Test
-    public void test02(){
+    public void test02() {
         Employee emp = employeeMapper.getEmpById(1);
         //默认如果保存对象,使用jdk序列化机制,序列化后的数据保存到redis
         //redisTemplate.opsForValue().set("emp-01",emp);
         //1.将数据以json的方式保存
         //(1).自己将对象转为json
         //(2).redisTemplate默认的序列化规则 ;改变默认的序列化规则
-        employeeRedisTemplate.opsForValue().set("emp-01",emp);
+        employeeRedisTemplate.opsForValue().set("emp-01", emp);
     }
 
     @Test

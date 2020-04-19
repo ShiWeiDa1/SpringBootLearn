@@ -9,6 +9,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class HelloApplicationContextInitializer implements ApplicationContextInitializer {
     @Override
     public void initialize(ConfigurableApplicationContext configurableApplicationContext) {
-        System.out.println("ApplicationContextInitializer...initialize..."+configurableApplicationContext);
+        System.out.println("ApplicationContextInitializer...initialize..." + configurableApplicationContext);
     }
 }

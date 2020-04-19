@@ -23,7 +23,7 @@ public class UserController {
      * @return
      */
     @GetMapping(value = "/user")
-    public User insertUser(User user){
+    public User insertUser(User user) {
         User save = userRepository.save(user);
         return save;
     }
@@ -35,12 +35,10 @@ public class UserController {
      * @return
      */
     @GetMapping(value = "/user/{id}")
-    public  User getUser(@PathVariable(value = "id") Integer id){
+    public User getUser(@PathVariable(value = "id") Integer id) {
         User user = userRepository.getOne(id);
         return user;
     }
-
-
 
 
 }

@@ -17,7 +17,7 @@ public class HelloController {
 
     @ResponseBody
     @GetMapping("/query")
-    public Map<String,Object> query (){
+    public Map<String, Object> query() {
         List<Map<String, Object>> list = jdbcTemplate.queryForList("select * from department");
 
         return list.get(0);

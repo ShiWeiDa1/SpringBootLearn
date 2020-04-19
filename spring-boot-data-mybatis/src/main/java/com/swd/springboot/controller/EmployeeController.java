@@ -22,7 +22,7 @@ public class EmployeeController {
      * @return
      */
     @GetMapping("/emp/{id}")
-    public Employee getEmpById(@PathVariable Integer id){
+    public Employee getEmpById(@PathVariable Integer id) {
         Employee employee = mapper.getEmployeeById(id);
         return employee;
     }
@@ -33,7 +33,7 @@ public class EmployeeController {
      * @return
      */
     @GetMapping("/emp")
-    public Employee insertEmp(Employee employee){
+    public Employee insertEmp(Employee employee) {
         System.out.println(employee);
 
 

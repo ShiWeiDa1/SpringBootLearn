@@ -16,17 +16,16 @@ public class SpringBootCrudApplicationTests {
     @Test
     public void contextLoads() {
         ListNode listNode = new ListNode(3);
-        listNode.next=new ListNode(4);
-        listNode=listNode.next;
+        listNode.next = new ListNode(4);
+        listNode = listNode.next;
 
 
-
-        listNode.next=new ListNode(5);
+        listNode.next = new ListNode(5);
         listNode = listNode.next;
 
         System.out.println(listNode);
         ArrayList<Integer> list = printListFromTailToHead(listNode);
-        for (int l:list) {
+        for (int l : list) {
             System.out.println(l);
         }
         /*int arr[][] = {
@@ -41,13 +40,12 @@ public class SpringBootCrudApplicationTests {
     }
 
 
-
     @Test
-    public  void test01(){
-        HashMap<Integer,User> map  =  new HashMap<>();
-        map.put(1,new User("tom",13));
-        map.put(3,new User("aom",3));
-        map.put(2,new User("bom",33));
+    public void test01() {
+        HashMap<Integer, User> map = new HashMap<>();
+        map.put(1, new User("tom", 13));
+        map.put(3, new User("aom", 3));
+        map.put(2, new User("bom", 33));
         System.out.println(map.toString());
         HashMap<Integer, Object> mapSort = hashMapSort(map);
 
@@ -56,24 +54,23 @@ public class SpringBootCrudApplicationTests {
 
     }
 
-    public static HashMap<Integer,Object> hashMapSort(HashMap<Integer,User> map){
+    public static HashMap<Integer, Object> hashMapSort(HashMap<Integer, User> map) {
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         Set<Map.Entry<Integer, User>> entries = map.entrySet();
-        ArrayList<Map.Entry<Integer,User>> list = new ArrayList<Map.Entry<Integer,User>>(entries);
+        ArrayList<Map.Entry<Integer, User>> list = new ArrayList<Map.Entry<Integer, User>>(entries);
 
         Collections.sort(list, new Comparator<Map.Entry<Integer, User>>() {
             @Override
             public int compare(Map.Entry<Integer, User> o1, Map.Entry<Integer, User> o2) {
-                return o2.getValue().getAge()-o1.getValue().getAge();
+                return o2.getValue().getAge() - o1.getValue().getAge();
             }
         });
         for (Map.Entry<Integer, User> entry : list) {
-            linkedHashMap.put(entry.getKey(),entry.getValue());
+            linkedHashMap.put(entry.getKey(), entry.getValue());
         }
 
 
         return linkedHashMap;
-
 
 
     }
@@ -83,10 +80,10 @@ public class SpringBootCrudApplicationTests {
         输入一个链表，按链表值从尾到头的顺序返回一个ArrayList。
     * */
     public static ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
-        ArrayList<Integer> list  =  new ArrayList<>();
-        while (null!=listNode){
+        ArrayList<Integer> list = new ArrayList<>();
+        while (null != listNode) {
             list.add(listNode.val);
-            listNode=listNode.next;
+            listNode = listNode.next;
 
         }
         return list;
@@ -101,23 +98,23 @@ public class SpringBootCrudApplicationTests {
      */
 
     public static String replaceSpace(StringBuffer str) {
-        for (int i=0;i<str.length();++i){
+        for (int i = 0; i < str.length(); ++i) {
             System.out.println(str.charAt(i));
 
-            if (str.charAt(i)==32){
+            if (str.charAt(i) == 32) {
                 System.out.println(i);
-                str.replace(i,i+1,"%20");
+                str.replace(i, i + 1, "%20");
             }
         }
         return str.toString();
     }
 
-    public static boolean find(int target,int array[][]){
-        for (int i=0;i<array.length;++i){
-            for (int j=0;j<array[i].length;++j){
+    public static boolean find(int target, int array[][]) {
+        for (int i = 0; i < array.length; ++i) {
+            for (int j = 0; j < array[i].length; ++j) {
 
-                if(target==array[i][j]){
-                    return  true;
+                if (target == array[i][j]) {
+                    return true;
 
                 }
             }
@@ -134,8 +131,8 @@ class ListNode {
 
     ListNode next = null;
 
-    ListNode(int val){
-        this.val=val;
+    ListNode(int val) {
+        this.val = val;
     }
 
     @Override
@@ -147,7 +144,7 @@ class ListNode {
     }
 }
 
-class  User{
+class User {
     private String name;
     private int age;
 

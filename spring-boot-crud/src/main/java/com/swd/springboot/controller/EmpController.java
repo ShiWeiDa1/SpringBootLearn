@@ -26,11 +26,11 @@ public class EmpController {
      * @return
      */
     @GetMapping("/emps")
-    public String getEmpList(Model model){
+    public String getEmpList(Model model) {
 
         Collection<Employee> emps = employeeDao.getAll();
 
-        model.addAttribute("emps",emps);
+        model.addAttribute("emps", emps);
 
         return "emp/list";
     }
@@ -42,9 +42,9 @@ public class EmpController {
      * @return
      */
     @GetMapping("/emp")
-    public String toAddEmpPage(Model model){
+    public String toAddEmpPage(Model model) {
         Collection<Department> departments = departmentDao.getDepartments();
-        model.addAttribute("depts",departments);
+        model.addAttribute("depts", departments);
         return "emp/add";
     }
 
@@ -56,7 +56,7 @@ public class EmpController {
      * @return
      */
     @PostMapping("/emp")
-    public String addEmp(Employee employee){
+    public String addEmp(Employee employee) {
         //System.out.println(employee);
         employeeDao.save(employee);
         return "redirect:/emps";
@@ -69,13 +69,13 @@ public class EmpController {
      * @return
      */
     @GetMapping("/emp/{id}")
-    public String toUpdatePage(Model model, @PathVariable("id") Integer id){
-        System.out.println("==>"+id);
+    public String toUpdatePage(Model model, @PathVariable("id") Integer id) {
+        System.out.println("==>" + id);
         Collection<Department> departments = departmentDao.getDepartments();
-        model.addAttribute("depts",departments);
+        model.addAttribute("depts", departments);
 
         Employee employee = employeeDao.get(id);
-        model.addAttribute("emp",employee);
+        model.addAttribute("emp", employee);
 
         return "emp/add";
     }
@@ -88,22 +88,20 @@ public class EmpController {
      * @return
      */
     @PutMapping("/emp")
-    public String updateEmp(Employee employee){
-        System.out.println("updateEmp=>"+employee);
+    public String updateEmp(Employee employee) {
+        System.out.println("updateEmp=>" + employee);
         employeeDao.save(employee);
         return "redirect:/emps";
     }
 
     @DeleteMapping("/emp/{id}")
-    public String deleteEmp(@PathVariable("id") Integer id){
+    public String deleteEmp(@PathVariable("id") Integer id) {
 
-        System.out.println("当前要删除员工的id==>"+id);
+        System.out.println("当前要删除员工的id==>" + id);
         employeeDao.delete(id);
 
         return "redirect:/emps";
     }
-
-
 
 
 }

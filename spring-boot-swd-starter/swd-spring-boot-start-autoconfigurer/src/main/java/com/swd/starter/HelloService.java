@@ -13,7 +13,7 @@ public class HelloService {
         this.helloServiceProperties = helloServiceProperties;
     }
 
-    public String sayHelloSwd(String name){
-        return helloServiceProperties.getPrefix()+"-"+name+helloServiceProperties.getSuffix();
+    public String sayHelloSwd(String name) {
+        return helloServiceProperties.getPrefix() + "-" + name + helloServiceProperties.getSuffix();
     }
 }

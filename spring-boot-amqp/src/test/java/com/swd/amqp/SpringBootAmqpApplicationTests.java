@@ -31,12 +31,12 @@ public class SpringBootAmqpApplicationTests {
      * 使用编码方式创建exchange和Queue,并绑定制定的路由键和队列
      */
     @Test
-    public void createExchange(){
+    public void createExchange() {
         //创建一个directExchanger(点对点)
         amqpAdmin.declareExchange(new DirectExchange("amqpAdmin.exchange"));
 
         //创建一个名字为amqpAdmin.news的队列
-        amqpAdmin.declareQueue(new Queue("amqpAdmin.queue",true));
+        amqpAdmin.declareQueue(new Queue("amqpAdmin.queue", true));
 
         //绑定exchange和Queue
         amqpAdmin.declareBinding(new Binding("amqpAdmin.queue",
@@ -46,8 +46,8 @@ public class SpringBootAmqpApplicationTests {
                 null));
 
 
-
     }
+
     /**
      * 1.单播(点对点)
      */
@@ -68,7 +68,7 @@ public class SpringBootAmqpApplicationTests {
         rabbitTemplate.convertAndSend("exchange.direct","swd.news",map);
         */
         //注入新的对象的序列化机制,使用Jackson2JsonMessageConverter来进行序列化参见MyAMPQConfig.java
-        rabbitTemplate.convertAndSend("exchange.direct","swd.news",new Book("西游记","吴承恩"));
+        rabbitTemplate.convertAndSend("exchange.direct", "swd.news", new Book("西游记", "吴承恩"));
 
 
     }
@@ -77,7 +77,7 @@ public class SpringBootAmqpApplicationTests {
      * 一次发送的消息只能接收一次,否则会出现NullPointerException异常
      */
     @Test
-    public void receive(){
+    public void receive() {
         Object o = rabbitTemplate.receiveAndConvert("swd.news");
         System.out.println(o.getClass());
         System.out.println(o);
@@ -87,11 +87,11 @@ public class SpringBootAmqpApplicationTests {
      * 测试广播
      */
     @Test
-    public void sendMsg(){
+    public void sendMsg() {
         System.out.println(
                 "sendMsg..."
         );
-        rabbitTemplate.convertAndSend("exchange.fanout","",new Book("红楼梦","曹雪芹"));
+        rabbitTemplate.convertAndSend("exchange.fanout", "", new Book("红楼梦", "曹雪芹"));
     }
 
 }

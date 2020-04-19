@@ -15,7 +15,7 @@ import java.io.Serializable;
 @Entity //告诉jpa这是一个实体类(和数据表映射的类)
 @Table(name = "tbl_user")   //@table指定和那个数据表对应,如果省略默认表名是user
 @JsonIgnoreProperties("hibernateLazyInitializer")//过滤掉Hibernate生成的属性
-public class User  {
+public class User {
     /**
      * @Id 表示主键
      * @GeneratedValue 设置自增主键
@@ -24,9 +24,9 @@ public class User  {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     /**
-     *  @Column 和数据表对应的一个列,可以指定列的名字等属性,如果省略属性名就是列名
+     *  @Column 和数据表对应的一个列, 可以指定列的名字等属性, 如果省略属性名就是列名
      */
-    @Column(name = "last_name",length = 50)
+    @Column(name = "last_name", length = 50)
     private String lastName;
     @Column
     private String email;

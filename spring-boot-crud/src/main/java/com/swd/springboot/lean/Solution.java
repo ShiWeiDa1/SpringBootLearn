@@ -44,7 +44,7 @@ public class Solution {
 
         }
         Collections.reverse(list);
-       return list;
+        return list;
 
     }
 

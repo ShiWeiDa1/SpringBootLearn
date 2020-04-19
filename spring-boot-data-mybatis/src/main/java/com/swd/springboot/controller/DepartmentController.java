@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DepartmentController {
 
     @Autowired
-    public DepartmentMapper deptMapper ;
+    public DepartmentMapper deptMapper;
 
     /**
      * 根据部门id,获取部门信息
@@ -19,13 +19,13 @@ public class DepartmentController {
      * @return
      */
     @GetMapping("/dept/{id}")
-    public Department getDept(@PathVariable("id") Integer id){
+    public Department getDept(@PathVariable("id") Integer id) {
         Department department = deptMapper.getDepartmentById(id);
         return department;
     }
 
     @GetMapping("/dept")
-    public Department insertDept(Department department){
+    public Department insertDept(Department department) {
         System.out.println(department);
         deptMapper.insertDepartment(department);
         return department;

@@ -55,7 +55,7 @@ public class EmployeeService {
      *
      *  运行的流程
      * @Cacheable
-     * 1.方法运行之前,先去查询Cache(缓存组件),按照CacheNames指定的名字获取;
+     * 1.方法运行之前, 先去查询Cache(缓存组件), 按照CacheNames指定的名字获取;
      *      (cachemanager先获取相应的缓存),第一次获取缓存如果没有cache组件会自动创建.
      * 2.去cache中查找缓存的内容,使用一个key, 默认就是方法的参数
      *  key是按照某种策略生成的;默认是使用keyGenerator生成的,默认使用SimplekeyGenerator生成key
@@ -65,7 +65,7 @@ public class EmployeeService {
      *              如果有多个参数:key=new SimpleKey(params);
      * 3.没有查到缓存就调用目标方法
      * 4.将目标方法返回的结果,放进缓存中
-     * @Cacheable 标注的方法在执行前会先检查当前缓存中有没有这个数据,默认按照参数的值作为key去查询缓存
+     * @Cacheable 标注的方法在执行前会先检查当前缓存中有没有这个数据, 默认按照参数的值作为key去查询缓存
      * 如果没有就运行方法并将结果放入缓存,以后在来调用就直接使用缓存中的数据
      *
      * 核心:
@@ -79,14 +79,14 @@ public class EmployeeService {
      */
 
     @Cacheable(cacheNames = {"emp"})
-    public Employee getEmpById(Integer id){
-        System.out.println("查询员工的id:"+id);
+    public Employee getEmpById(Integer id) {
+        System.out.println("查询员工的id:" + id);
         Employee emp = employeeMapper.getEmpById(id);
         return emp;
     }
 
     /**
-     * @CachePut: 既调用方法,又更新缓存数据 同步更新缓存
+     * @CachePut: 既调用方法, 又更新缓存数据 同步更新缓存
      * 修改数据库的某个值,同时更新缓存
      * 运行时机:
      * 1.先调用目标方法
@@ -109,11 +109,12 @@ public class EmployeeService {
      * @return
      */
     @CachePut(/*value = "emp",*/key = "#result.id")
-    public Employee updateEmp(Employee employee){
-        System.out.println("update..."+employee);
+    public Employee updateEmp(Employee employee) {
+        System.out.println("update..." + employee);
         employeeMapper.updateEmp(employee);
         return employee;
     }
+
     /**
      * @CacheEvict :缓存清除
      *  key:指定要清除的值
@@ -124,10 +125,10 @@ public class EmployeeService {
      *       代表缓存清除操作是在方法执行之前执行,无论方法是否出现异常都执行清除操作
      */
 
-    @CacheEvict(value = "emp",key = "#id")
-    public void deleteEmp(Integer id){
-        System.out.println("deleteEmp:"+id);
-       // employeeMapper.delEmpById(id);
+    @CacheEvict(value = "emp", key = "#id")
+    public void deleteEmp(Integer id) {
+        System.out.println("deleteEmp:" + id);
+        // employeeMapper.delEmpById(id);
     }
 
     /**
@@ -136,16 +137,16 @@ public class EmployeeService {
      * @return
      */
     @Caching(
-        cacheable = {
-                @Cacheable(value = "emp",key = "#lastName")
-        },
-        put = {
-                @CachePut(value = "emp",key = "#result.id"),
-                @CachePut(value = "emp",key = "#result.email")
-        }
+            cacheable = {
+                    @Cacheable(value = "emp", key = "#lastName")
+            },
+            put = {
+                    @CachePut(value = "emp", key = "#result.id"),
+                    @CachePut(value = "emp", key = "#result.email")
+            }
 
     )
-    public Employee getEmpByLastName(String lastName){
+    public Employee getEmpByLastName(String lastName) {
         return employeeMapper.getEmpByLastName(lastName);
     }
 }

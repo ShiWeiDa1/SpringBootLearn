@@ -15,27 +15,28 @@ public class EmployeeController {
 
     @Autowired
     EmployeeService employeeService;
+
     @GetMapping("/emp/{id}")
-    public Employee getEmpById(@PathVariable("id") Integer id){
+    public Employee getEmpById(@PathVariable("id") Integer id) {
         Employee emp = employeeService.getEmpById(id);
         return emp;
     }
 
 
     @GetMapping("/emp")
-    public Employee updateEmp(Employee employee){
+    public Employee updateEmp(Employee employee) {
         Employee emp = employeeService.updateEmp(employee);
         return emp;
     }
 
     @GetMapping("/delEmp/{id}")
-    public String delEmp(@PathVariable("id") Integer id){
+    public String delEmp(@PathVariable("id") Integer id) {
         employeeService.deleteEmp(id);
         return "success";
     }
 
     @GetMapping("/emp/lastName/{lastName}")
-    public Employee getEmpByLastName(@PathVariable("lastName") String lastName){
+    public Employee getEmpByLastName(@PathVariable("lastName") String lastName) {
         Employee emp = employeeService.getEmpByLastName(lastName);
         System.out.println(emp);
         return emp;

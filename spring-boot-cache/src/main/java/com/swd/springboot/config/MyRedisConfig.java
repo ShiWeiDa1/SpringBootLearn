@@ -50,6 +50,7 @@ public class MyRedisConfig {
         template.setDefaultSerializer(serializer);
         return template;
     }
+
     /**
      * CacheManagerCustomizers 来定制缓存的一些规则
      * @param redisConnectionFactory
@@ -75,7 +76,7 @@ public class MyRedisConfig {
 
     @Bean
     public RedisCacheManager departmentCacheManager(RedisConnectionFactory redisConnectionFactory,
-                                                    ResourceLoader resourceLoader){
+                                                    ResourceLoader resourceLoader) {
         Jackson2JsonRedisSerializer<Department> serializer = new Jackson2JsonRedisSerializer<>(Department.class);
         RedisCacheConfiguration configuration = RedisCacheConfiguration.defaultCacheConfig()
                 .entryTtl(Duration.ofDays(1))

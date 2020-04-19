@@ -6,8 +6,8 @@ spring:
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
     #schema:
-      #- classpath:sql/department.sql
-      #- classpath:sql/employee.sql
+    #- classpath:sql/department.sql
+    #- classpath:sql/employee.sql
     #initialization-mode: always
     #   数据源其他配置
     initialSize: 5

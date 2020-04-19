@@ -15,6 +15,7 @@ import java.util.Locale;
 public class MyLocaleResolver implements LocaleResolver {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
+
     /**
      * 解析区域信息
      * @param request
@@ -28,11 +29,10 @@ public class MyLocaleResolver implements LocaleResolver {
         //logger.info(l);
         //获取本机默认的区域信息
         Locale locale = Locale.getDefault();
-        if (!StringUtils.isEmpty(l)){
+        if (!StringUtils.isEmpty(l)) {
             String[] split = l.split("_");
-            locale = new Locale(split[0],split[1]);
+            locale = new Locale(split[0], split[1]);
         }
-
 
 
         return locale;

@@ -11,8 +11,8 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>success</h1>
-    <h2>${requestScope.hello}</h2>
+<h1>success</h1>
+<h2>${requestScope.hello}</h2>
 
 </body>
 </html>

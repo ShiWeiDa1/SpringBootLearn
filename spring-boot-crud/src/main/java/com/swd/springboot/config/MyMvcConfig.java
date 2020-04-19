@@ -17,12 +17,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class MyMvcConfig implements WebMvcConfigurer {
 
 
-
-
-
     //配置自己的webmvc配置
     @Bean
-    public WebMvcConfigurer webMvcConfigurer(){
+    public WebMvcConfigurer webMvcConfigurer() {
         WebMvcConfigurer webMvcConfigurer = new WebMvcConfigurer() {
 
             /**
@@ -44,7 +41,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
             public void addInterceptors(InterceptorRegistry registry) {
                 registry.addInterceptor(new LoginHandlerInterceptor())
                         .addPathPatterns("/**")
-                        .excludePathPatterns("/","/index.html","/user/login","/static/**","/asserts/**","/webjars/**");
+                        .excludePathPatterns("/", "/index.html", "/user/login", "/static/**", "/asserts/**", "/webjars/**");
             }
         };
         return webMvcConfigurer;
@@ -55,7 +52,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
      * @return
      */
     @Bean
-    public LocaleResolver localeResolver(){
+    public LocaleResolver localeResolver() {
         return new MyLocaleResolver();
     }
 }

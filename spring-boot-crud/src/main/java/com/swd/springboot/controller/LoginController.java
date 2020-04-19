@@ -14,23 +14,23 @@ import java.util.Map;
 public class LoginController {
 
     Logger logger = LoggerFactory.getLogger(getClass());
+
     @PostMapping(value = "/user/login")
     public String login(@RequestParam("username") String username,
                         @RequestParam("password") String password,
-                        Map<String,Object> map,
-                        HttpSession session){
+                        Map<String, Object> map,
+                        HttpSession session) {
 
-        logger.info(username+"="+password);
+        logger.info(username + "=" + password);
 
-        if(!StringUtils.isEmpty(username)&&"123".equals(password)){
-            session.setAttribute("loginUser",username);
+        if (!StringUtils.isEmpty(username) && "123".equals(password)) {
+            session.setAttribute("loginUser", username);
             return "redirect:/main.html";
-        }else {
+        } else {
             //map中放的值,页面能获取
-            map.put("msg","用户名或密码错误!");
+            map.put("msg", "用户名或密码错误!");
             return "login";
         }
-
 
 
     }

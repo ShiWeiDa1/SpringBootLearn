@@ -23,7 +23,7 @@ public class DruidConfig {
      */
     @ConfigurationProperties(prefix = "spring.datasource")
     @Bean
-    public DataSource getDruidDataSource(){
+    public DataSource getDruidDataSource() {
         return new DruidDataSource();
     }
 
@@ -33,12 +33,12 @@ public class DruidConfig {
      * @return
      */
     @Bean
-    public ServletRegistrationBean statViewServlet(){
-        ServletRegistrationBean bean = new ServletRegistrationBean(new StatViewServlet(),"/druid/*");
+    public ServletRegistrationBean statViewServlet() {
+        ServletRegistrationBean bean = new ServletRegistrationBean(new StatViewServlet(), "/druid/*");
         Map<String, String> initParameters = new HashMap<>();
-        initParameters.put("loginUsername","admin");
-        initParameters.put("loginPassword","admin");
-        initParameters.put("allow","");//默认是所有都可以访问
+        initParameters.put("loginUsername", "admin");
+        initParameters.put("loginPassword", "admin");
+        initParameters.put("allow", "");//默认是所有都可以访问
         bean.setInitParameters(initParameters);
         return bean;
     }
@@ -49,13 +49,13 @@ public class DruidConfig {
      * @return
      */
     @Bean
-    public FilterRegistrationBean webStatFilter(){
+    public FilterRegistrationBean webStatFilter() {
         FilterRegistrationBean bean = new FilterRegistrationBean();
         bean.setFilter(new WebStatFilter());
         Map<String, String> initParameters = new HashMap<>();
 
         //将静态资源不设置为拦截
-        initParameters.put("exclusions","*.js,*.css,/druid/*");
+        initParameters.put("exclusions", "*.js,*.css,/druid/*");
         bean.setInitParameters(initParameters);
 
         //设置过滤器拦截的url地址

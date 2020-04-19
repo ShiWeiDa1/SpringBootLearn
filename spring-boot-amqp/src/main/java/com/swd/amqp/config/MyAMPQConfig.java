@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MyAMPQConfig {
     @Bean
-    public MessageConverter messageConverter(){
+    public MessageConverter messageConverter() {
         System.out.println("messageConverter...");
         return new Jackson2JsonMessageConverter();
     }

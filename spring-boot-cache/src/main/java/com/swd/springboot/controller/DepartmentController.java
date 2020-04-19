@@ -15,9 +15,10 @@ public class DepartmentController {
 
     @Autowired
     DepartmentService departmentService;
+
     @GetMapping("/dept/{id}")
-    public Department getDepartmentById(@PathVariable("id") Integer id){
-        System.out.println("查询的部门id:"+id);
+    public Department getDepartmentById(@PathVariable("id") Integer id) {
+        System.out.println("查询的部门id:" + id);
         Department departmentById = departmentService.getDepartmentById(id);
         return departmentById;
     }

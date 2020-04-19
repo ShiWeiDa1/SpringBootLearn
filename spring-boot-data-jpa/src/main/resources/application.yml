@@ -7,7 +7,7 @@ spring:
     password: 123456
   jpa:
     hibernate:
-#      更新或创建数据库表结构
+      #      更新或创建数据库表结构
       ddl-auto: update
     show-sql: true
 

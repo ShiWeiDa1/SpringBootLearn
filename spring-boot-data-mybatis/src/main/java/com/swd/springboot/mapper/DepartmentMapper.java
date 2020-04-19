@@ -20,7 +20,7 @@ public interface DepartmentMapper {
      * @param department
      * @return
      */
-    @Options(useGeneratedKeys = true,keyProperty = "id")
+    @Options(useGeneratedKeys = true, keyProperty = "id")
     @Insert("insert into department (departmentName) values (#{departmentName})")
     public int insertDepartment(Department department);
 
@@ -39,8 +39,6 @@ public interface DepartmentMapper {
      */
     @Update("update department set departmentName = #{departmentName} where id = #{id}")
     public int updateDepartment(Department department);
-
-
 
 
 }

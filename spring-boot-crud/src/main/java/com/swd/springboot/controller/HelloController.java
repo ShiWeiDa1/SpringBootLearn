@@ -11,10 +11,10 @@ public class HelloController {
 
     @ResponseBody
     @RequestMapping("/hello")
-    public String sayHello(@RequestParam("user") String user){
+    public String sayHello(@RequestParam("user") String user) {
 
         //请求参数 user 是aaa,则抛出用户不存在的异常
-        if("aaa".equals(user)){
+        if ("aaa".equals(user)) {
             throw new UserNotExistException();
         }
 

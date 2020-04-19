@@ -9,7 +9,7 @@ public class MybatisConfig {
      * mybatis的自定义配置类
      * @return
      */
-    public ConfigurationCustomizer configurationCustomizer(){
+    public ConfigurationCustomizer configurationCustomizer() {
         return new ConfigurationCustomizer() {
             @Override
             public void customize(Configuration configuration) {

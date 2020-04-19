@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * @author swd
  */
 @Service
-@CacheConfig(cacheNames = "dept",cacheManager = "departmentCacheManager")
+@CacheConfig(cacheNames = "dept", cacheManager = "departmentCacheManager")
 public class DepartmentService {
     @Autowired
     DepartmentMapper departmentMapper;
@@ -35,11 +35,11 @@ public class DepartmentService {
      * @param id
      * @return
      */
-    public Department getDepartmentById(Integer id){
+    public Department getDepartmentById(Integer id) {
         Department deptById = departmentMapper.getDeptById(id);
         //获取某一个缓存
         Cache dept = departmentCacheManager.getCache("dept");
-        dept.put("dept:1",deptById);
+        dept.put("dept:1", deptById);
         return deptById;
     }
 }
