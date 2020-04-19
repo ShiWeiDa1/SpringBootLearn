@@ -1,0 +1,20 @@
+<!--
+    debug 属性只跟状态信息有关，并不会影响 logback 的配置文件，也不会影响 logger 的日志级别。
+    scan 属性 配置文件改变自动扫描 默认为 1分钟1次
+           =true   new ReconfigureOnChangeTask,检测语法是否有问题,如果有问题则回退到上个配置文件
+    scanPeriod 属性 设置自动扫描的频率
+    packagingData 属性
+    -->
+<configuration debug="true" scan="true" scanPeriod="30 seconds">
+    <!-- 这条语句和配置debug='true'的概念是一样的   -->
+    <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener"/>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
