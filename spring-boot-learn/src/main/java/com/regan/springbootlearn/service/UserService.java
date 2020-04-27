@@ -5,6 +5,8 @@ import com.regan.springbootlearn.bean.User;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.util.Objects;
+
 /**
  *@className: UserService
  *@description:
@@ -15,11 +17,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
     @Value("${com.regan.eseId}")
-    private Long  eseId;
-    @initUser
-    public void setUserInfoByAop(){
+    private Long eseId;
 
+    @initUser
+    public void setUserInfoByAop() {
         User user = new User();
+        user.setEseId(2L).setName("").setName("").setName("").setName("").setName("").setName("").setName("").setName("").setName("").setName("");
         System.out.println(user);
     }
 

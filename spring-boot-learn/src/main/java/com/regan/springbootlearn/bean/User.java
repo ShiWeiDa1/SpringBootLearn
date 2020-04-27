@@ -2,6 +2,7 @@ package com.regan.springbootlearn.bean;
 
 import com.regan.springbootlearn.aop.initUser;
 import lombok.Data;
+import lombok.experimental.Accessors;
 import org.springframework.beans.factory.annotation.Value;
 
 import java.io.Serializable;
@@ -14,6 +15,7 @@ import java.io.Serializable;
  *@version: V1.0
  **/
 @Data
+@Accessors(chain = true)
 @initUser
 public class User implements Serializable {
 
