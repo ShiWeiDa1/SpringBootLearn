@@ -22,7 +22,6 @@ public class EmployeeController {
         return emp;
     }
 
-
     @GetMapping("/emp")
     public Employee updateEmp(Employee employee) {
         Employee emp = employeeService.updateEmp(employee);

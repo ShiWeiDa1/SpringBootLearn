@@ -7,7 +7,6 @@ import java.util.Map;
 import com.swd.springboot.entities.Department;
 import org.springframework.stereotype.Repository;
 
-
 @Repository
 public class DepartmentDao {
 

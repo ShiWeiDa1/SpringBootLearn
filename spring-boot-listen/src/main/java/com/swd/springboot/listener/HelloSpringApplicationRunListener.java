@@ -19,7 +19,7 @@ public class HelloSpringApplicationRunListener implements SpringApplicationRunLi
 
     @Override
     public void environmentPrepared(ConfigurableEnvironment environment) {
-        //获取操作系统名称
+        // 获取操作系统名称
         Object o = environment.getSystemProperties().get("os.name");
         System.out.println("SpringApplicationRunListener...environmentPrepared..." + o);
     }

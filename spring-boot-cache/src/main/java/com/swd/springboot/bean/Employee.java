@@ -16,11 +16,9 @@ public class Employee implements Serializable {
     private Integer gender;
     private Integer dId;
 
-
     public Employee() {
         super();
     }
-
 
     public Employee(Integer id, String lastName, String email, Integer gender, Integer dId) {
         super();
@@ -73,9 +71,7 @@ public class Employee implements Serializable {
 
     @Override
     public String toString() {
-        return "Employee [id=" + id + ", lastName=" + lastName + ", email=" + email + ", gender=" + gender + ", dId="
-                + dId + "]";
+        return "Employee [id=" + id + ", lastName=" + lastName + ", email=" + email + ", gender=" + gender + ", dId=" + dId + "]";
     }
-
 
 }

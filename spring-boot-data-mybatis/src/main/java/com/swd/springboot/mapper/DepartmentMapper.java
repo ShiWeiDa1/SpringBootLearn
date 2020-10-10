@@ -40,5 +40,4 @@ public interface DepartmentMapper {
     @Update("update department set departmentName = #{departmentName} where id = #{id}")
     public int updateDepartment(Department department);
 
-
 }

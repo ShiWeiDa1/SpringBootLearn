@@ -13,11 +13,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 //配置类,配置自己的组件,使用WebMvcConfigurer来扩展SpringMvc的功能
 @Configuration
-//@EnableWebMvc  //该注解使得自动配置的springmvc失效,所有的操作都是又自己手动配置
+// @EnableWebMvc //该注解使得自动配置的springmvc失效,所有的操作都是又自己手动配置
 public class MyMvcConfig implements WebMvcConfigurer {
 
-
-    //配置自己的webmvc配置
+    // 配置自己的webmvc配置
     @Bean
     public WebMvcConfigurer webMvcConfigurer() {
         WebMvcConfigurer webMvcConfigurer = new WebMvcConfigurer() {
@@ -39,9 +38,8 @@ public class MyMvcConfig implements WebMvcConfigurer {
              */
             @Override
             public void addInterceptors(InterceptorRegistry registry) {
-                registry.addInterceptor(new LoginHandlerInterceptor())
-                        .addPathPatterns("/**")
-                        .excludePathPatterns("/", "/index.html", "/user/login", "/static/**", "/asserts/**", "/webjars/**");
+                registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**").excludePathPatterns("/",
+                        "/index.html", "/user/login", "/static/**", "/asserts/**", "/webjars/**");
             }
         };
         return webMvcConfigurer;

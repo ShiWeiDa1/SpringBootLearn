@@ -36,11 +36,9 @@ public class EmployeeController {
     public Employee insertEmp(Employee employee) {
         System.out.println(employee);
 
-
         mapper.insertEmployee(employee);
         return employee;
 
     }
-
 
 }

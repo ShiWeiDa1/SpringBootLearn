@@ -38,11 +38,10 @@ public class DruidConfig {
         Map<String, String> initParameters = new HashMap<>();
         initParameters.put("loginUsername", "admin");
         initParameters.put("loginPassword", "admin");
-        initParameters.put("allow", "");//默认是所有都可以访问
+        initParameters.put("allow", "");// 默认是所有都可以访问
         bean.setInitParameters(initParameters);
         return bean;
     }
-
 
     /**
      * 配置一个web监控的filter
@@ -54,14 +53,13 @@ public class DruidConfig {
         bean.setFilter(new WebStatFilter());
         Map<String, String> initParameters = new HashMap<>();
 
-        //将静态资源不设置为拦截
+        // 将静态资源不设置为拦截
         initParameters.put("exclusions", "*.js,*.css,/druid/*");
         bean.setInitParameters(initParameters);
 
-        //设置过滤器拦截的url地址
+        // 设置过滤器拦截的url地址
         bean.setUrlPatterns(Arrays.asList("/*"));
         return bean;
     }
-
 
 }

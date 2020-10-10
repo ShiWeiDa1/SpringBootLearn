@@ -3,15 +3,9 @@ package com.swd.springboot.lean;
 public class Test {
 
     public static void main(String[] args) {
-        int[][] arr = {
-                {1, 2, 3, 4, 5},
-                {6, 7, 8, 9, 10},
-                {20, 30, 40, 50, 60},
-                {61, 62, 63, 64, 65}
-        };
+        int[][] arr = { { 1, 2, 3, 4, 5 }, { 6, 7, 8, 9, 10 }, { 20, 30, 40, 50, 60 }, { 61, 62, 63, 64, 65 } };
         System.out.println(Find(89, arr));
     }
-
 
     /**
      *
@@ -24,13 +18,10 @@ public class Test {
      * @return
      */
     public static boolean Find(int target, int[][] array) {
-        /*for(int i=0;i<array.length;++i){
-            for(int j=0;j<array[i].length;++j){
-                if(target==array[i][j]){
-                    return true;
-                }
-            }
-        }*/
+        /*
+         * for(int i=0;i<array.length;++i){ for(int j=0;j<array[i].length;++j){
+         * if(target==array[i][j]){ return true; } } }
+         */
 
         int rows = array.length;
         int cols = array[0].length;
@@ -44,9 +35,7 @@ public class Test {
             int low = 0;
             int high = rows - 1;
 
-
             while (low <= high) {
-
 
                 int mid = (low + high) / 2;
                 if (target < array[i][mid]) {
@@ -63,9 +52,7 @@ public class Test {
 
         }
 
-
         return false;
     }
-
 
 }

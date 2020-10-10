@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
  * @author Tom
  */
-@Target({ElementType.TYPE_PARAMETER,ElementType.TYPE,ElementType.LOCAL_VARIABLE,ElementType.METHOD})
+@Target({ ElementType.TYPE_PARAMETER, ElementType.TYPE, ElementType.LOCAL_VARIABLE, ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)
 public @interface initUser {
 }

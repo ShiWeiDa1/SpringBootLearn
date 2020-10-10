@@ -21,7 +21,6 @@ public class User implements Serializable {
 
     private static final long serialVersionUID = 7811044673179257914L;
 
-
     @Value("${com.regan.eseId}")
     private Long eseId;
 

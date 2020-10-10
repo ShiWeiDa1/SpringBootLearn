@@ -9,13 +9,8 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", gender=" + gender +
-                ", dId=" + dId +
-                '}';
+        return "Employee{" + "id=" + id + ", lastName='" + lastName + '\'' + ", email='" + email + '\'' + ", gender=" + gender
+                + ", dId=" + dId + '}';
     }
 
     public Integer getId() {

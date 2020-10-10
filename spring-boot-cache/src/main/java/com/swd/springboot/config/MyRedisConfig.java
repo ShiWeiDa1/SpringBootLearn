@@ -45,7 +45,7 @@ public class MyRedisConfig {
             throws UnknownHostException {
         RedisTemplate<Object, Department> template = new RedisTemplate<>();
         template.setConnectionFactory(redisConnectionFactory);
-        //jackson2的序列化器
+        // jackson2的序列化器
         Jackson2JsonRedisSerializer<Department> serializer = new Jackson2JsonRedisSerializer<Department>(Department.class);
         template.setDefaultSerializer(serializer);
         return template;
@@ -64,11 +64,12 @@ public class MyRedisConfig {
         Jackson2JsonRedisSerializer<Employee> serializer = new Jackson2JsonRedisSerializer<>(Employee.class);
 
         RedisCacheConfiguration configuration = RedisCacheConfiguration.defaultCacheConfig()
-                //设置持续时间
+                // 设置持续时间
                 .entryTtl(Duration.ofDays(1))
-                //设置Jackson来序列化
+                // 设置Jackson来序列化
                 .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(serializer));
-        RedisCacheManager redisCacheManager = RedisCacheManager.builder(redisConnectionFactory).cacheDefaults(configuration).build();
+        RedisCacheManager redisCacheManager = RedisCacheManager.builder(redisConnectionFactory).cacheDefaults(configuration)
+                .build();
 
         return redisCacheManager;
 
@@ -76,15 +77,14 @@ public class MyRedisConfig {
 
     @Bean
     public RedisCacheManager departmentCacheManager(RedisConnectionFactory redisConnectionFactory,
-                                                    ResourceLoader resourceLoader) {
+            ResourceLoader resourceLoader) {
         Jackson2JsonRedisSerializer<Department> serializer = new Jackson2JsonRedisSerializer<>(Department.class);
-        RedisCacheConfiguration configuration = RedisCacheConfiguration.defaultCacheConfig()
-                .entryTtl(Duration.ofDays(1))
+        RedisCacheConfiguration configuration = RedisCacheConfiguration.defaultCacheConfig().entryTtl(Duration.ofDays(1))
                 .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(serializer));
 
-        RedisCacheManager redisCacheManager = RedisCacheManager.builder(redisConnectionFactory).cacheDefaults(configuration).build();
+        RedisCacheManager redisCacheManager = RedisCacheManager.builder(redisConnectionFactory).cacheDefaults(configuration)
+                .build();
         return redisCacheManager;
     }
-
 
 }

@@ -17,14 +17,14 @@ import java.util.Map;
 @Configuration
 public class DruidConfig {
 
-    //导入Druid的pool
+    // 导入Druid的pool
     @ConfigurationProperties(prefix = "spring.datasource")
     @Bean
     public DataSource getDruid() {
         return new DruidDataSource();
     }
 
-    //1.注册状态视图servlet
+    // 1.注册状态视图servlet
     @Bean
     public ServletRegistrationBean statViewServlet() {
         ServletRegistrationBean<StatViewServlet> bean = new ServletRegistrationBean<>(new StatViewServlet(), "/druid/*");
@@ -36,7 +36,7 @@ public class DruidConfig {
         return bean;
     }
 
-    //2.注册过滤器
+    // 2.注册过滤器
     @Bean
     public FilterRegistrationBean webStatFilter() {
         FilterRegistrationBean bean = new FilterRegistrationBean();

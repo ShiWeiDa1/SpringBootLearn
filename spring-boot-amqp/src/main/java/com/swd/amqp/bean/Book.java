@@ -1,6 +1,5 @@
 package com.swd.amqp.bean;
 
-
 /**
  * @author swd
  */
@@ -34,9 +33,6 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "bookName='" + bookName + '\'' +
-                ", author='" + author + '\'' +
-                '}';
+        return "Book{" + "bookName='" + bookName + '\'' + ", author='" + author + '\'' + '}';
     }
 }

@@ -48,7 +48,6 @@ public class EmpController {
         return "emp/add";
     }
 
-
     /**
      * 添加员工信息
      * 返回员工列表
@@ -57,7 +56,7 @@ public class EmpController {
      */
     @PostMapping("/emp")
     public String addEmp(Employee employee) {
-        //System.out.println(employee);
+        // System.out.println(employee);
         employeeDao.save(employee);
         return "redirect:/emps";
     }
@@ -80,7 +79,6 @@ public class EmpController {
         return "emp/add";
     }
 
-
     /**
      * 更新员工信息
      * 返回员工列表
@@ -102,6 +100,5 @@ public class EmpController {
 
         return "redirect:/emps";
     }
-
 
 }

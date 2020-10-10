@@ -6,7 +6,12 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/spring-boot-resttemplate/pom.xml" />
+        <option value="$PROJECT_DIR$/sping-bootproperties/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-amqp/pom.xml" />
+        <option value="$PROJECT_DIR$/sping-boot-properties/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-crud/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo/pom.xml" />
       </list>
     </option>
   </component>

@@ -28,7 +28,6 @@ public class UserController {
         return save;
     }
 
-
     /**
      * 根据用户id获取用户信息
      * @param id
@@ -39,6 +38,5 @@ public class UserController {
         User user = userRepository.getOne(id);
         return user;
     }
-
 
 }

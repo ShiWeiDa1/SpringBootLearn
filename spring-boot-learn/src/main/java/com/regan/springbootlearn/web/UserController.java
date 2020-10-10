@@ -19,8 +19,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
     @GetMapping
-    public void setUserDefaultInfo(){
+    public void setUserDefaultInfo() {
 
         userService.setUserInfoByAop();
     }

@@ -1,6 +1,5 @@
 package com.swd.springboot.entity;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.GeneratorType;
@@ -11,10 +10,10 @@ import java.io.Serializable;
 /**
  * @author swd
  */
-//使用jpa注解,配置映射关系
-@Entity //告诉jpa这是一个实体类(和数据表映射的类)
-@Table(name = "tbl_user")   //@table指定和那个数据表对应,如果省略默认表名是user
-@JsonIgnoreProperties("hibernateLazyInitializer")//过滤掉Hibernate生成的属性
+// 使用jpa注解,配置映射关系
+@Entity // 告诉jpa这是一个实体类(和数据表映射的类)
+@Table(name = "tbl_user") // @table指定和那个数据表对应,如果省略默认表名是user
+@JsonIgnoreProperties("hibernateLazyInitializer") // 过滤掉Hibernate生成的属性
 public class User {
     /**
      * @Id 表示主键
@@ -57,10 +56,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+        return "User{" + "id=" + id + ", lastName='" + lastName + '\'' + ", email='" + email + '\'' + '}';
     }
 }

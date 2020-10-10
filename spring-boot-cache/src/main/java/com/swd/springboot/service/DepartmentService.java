@@ -23,12 +23,10 @@ public class DepartmentService {
     @Autowired
     RedisCacheManager departmentCacheManager;
     /*
-    @Cacheable
-    public Department getDepartmentById(Integer id){
-        System.out.println("DepartmentService");
-        Department deptById = departmentMapper.getDeptById(id);
-        return  deptById;
-    }*/
+     * @Cacheable public Department getDepartmentById(Integer id){
+     * System.out.println("DepartmentService"); Department deptById =
+     * departmentMapper.getDeptById(id); return deptById; }
+     */
 
     /**
      * 编码方式编写缓存,使用缓存管理器得到缓存操作
@@ -37,7 +35,7 @@ public class DepartmentService {
      */
     public Department getDepartmentById(Integer id) {
         Department deptById = departmentMapper.getDeptById(id);
-        //获取某一个缓存
+        // 获取某一个缓存
         Cache dept = departmentCacheManager.getCache("dept");
         dept.put("dept:1", deptById);
         return deptById;

@@ -1,6 +1,5 @@
 package com.swd.springboot.config;
 
-
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
@@ -41,7 +40,7 @@ public class DruidConfig {
     @Bean
     public ServletRegistrationBean statViewServlet() {
         ServletRegistrationBean<StatViewServlet> bean = new ServletRegistrationBean<>(new StatViewServlet(), "/druid/*");
-        //设置StatViewServlet的初始化参数
+        // 设置StatViewServlet的初始化参数
         Map<String, String> initParameters = new HashMap<>();
         initParameters.put("loginUsername", "admin");
         initParameters.put("loginPassword", "admin");
@@ -61,6 +60,5 @@ public class DruidConfig {
         bean.setUrlPatterns(Arrays.asList("/*"));
         return bean;
     }
-
 
 }

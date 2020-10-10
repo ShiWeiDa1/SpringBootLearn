@@ -28,6 +28,7 @@ public class UserAspect {
 
     @Value("${com.regan.eseId}")
     private Long eseId;
+
     @Pointcut("@annotation(initUser)")
     public void pointCut() {
     }
@@ -37,8 +38,8 @@ public class UserAspect {
         System.out.println("before");
         Method method = User.class.getMethod("setEseId", Long.class);
         User user = new User();
-        method.invoke(user,eseId);
-        System.out.println("========"+user);
+        method.invoke(user, eseId);
+        System.out.println("========" + user);
     }
 
 }

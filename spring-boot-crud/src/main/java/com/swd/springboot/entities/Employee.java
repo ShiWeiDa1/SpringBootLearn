@@ -8,7 +8,7 @@ public class Employee {
     private String lastName;
 
     private String email;
-    //1 male, 0 female
+    // 1 male, 0 female
     private Integer gender;
     private Department department;
     private Date birth;
@@ -61,8 +61,7 @@ public class Employee {
         this.birth = birth;
     }
 
-    public Employee(Integer id, String lastName, String email, Integer gender,
-                    Department department) {
+    public Employee(Integer id, String lastName, String email, Integer gender, Department department) {
         super();
         this.id = id;
         this.lastName = lastName;
@@ -77,15 +76,8 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", gender=" + gender +
-                ", department=" + department +
-                ", birth=" + birth +
-                '}';
+        return "Employee{" + "id=" + id + ", lastName='" + lastName + '\'' + ", email='" + email + '\'' + ", gender=" + gender
+                + ", department=" + department + ", birth=" + birth + '}';
     }
-
 
 }

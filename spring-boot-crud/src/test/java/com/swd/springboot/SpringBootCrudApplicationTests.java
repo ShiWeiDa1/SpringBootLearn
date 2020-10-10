@@ -8,7 +8,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import javax.swing.tree.TreeCellEditor;
 import java.util.*;
 
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class SpringBootCrudApplicationTests {
@@ -19,7 +18,6 @@ public class SpringBootCrudApplicationTests {
         listNode.next = new ListNode(4);
         listNode = listNode.next;
 
-
         listNode.next = new ListNode(5);
         listNode = listNode.next;
 
@@ -28,17 +26,16 @@ public class SpringBootCrudApplicationTests {
         for (int l : list) {
             System.out.println(l);
         }
-        /*int arr[][] = {
-            {1,2,3,4},
-            {5,6,7,8},
-            {9,10,11,12}
-        };
-        System.out.println(find(14,arr));*/
+        /*
+         * int arr[][] = { {1,2,3,4}, {5,6,7,8}, {9,10,11,12} };
+         * System.out.println(find(14,arr));
+         */
 
-      /*  String s = replaceSpace(new StringBuffer("We Are Happy."));
-        System.out.println(s);*/
+        /*
+         * String s = replaceSpace(new StringBuffer("We Are Happy."));
+         * System.out.println(s);
+         */
     }
-
 
     @Test
     public void test01() {
@@ -48,7 +45,6 @@ public class SpringBootCrudApplicationTests {
         map.put(2, new User("bom", 33));
         System.out.println(map.toString());
         HashMap<Integer, Object> mapSort = hashMapSort(map);
-
 
         System.out.println(mapSort);
 
@@ -69,16 +65,13 @@ public class SpringBootCrudApplicationTests {
             linkedHashMap.put(entry.getKey(), entry.getValue());
         }
 
-
         return linkedHashMap;
-
 
     }
 
-
     /*
-        输入一个链表，按链表值从尾到头的顺序返回一个ArrayList。
-    * */
+     * 输入一个链表，按链表值从尾到头的顺序返回一个ArrayList。
+     */
     public static ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
         ArrayList<Integer> list = new ArrayList<>();
         while (null != listNode) {
@@ -123,7 +116,6 @@ public class SpringBootCrudApplicationTests {
 
     }
 
-
 }
 
 class ListNode {
@@ -137,10 +129,7 @@ class ListNode {
 
     @Override
     public String toString() {
-        return "ListNode{" +
-                "val=" + val +
-                ", next=" + next +
-                '}';
+        return "ListNode{" + "val=" + val + ", next=" + next + '}';
     }
 }
 
@@ -174,9 +163,6 @@ class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                '}';
+        return "User{" + "name='" + name + '\'' + ", age=" + age + '}';
     }
 }

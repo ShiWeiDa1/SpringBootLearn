@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JavaThead/JavaThead.iml" filepath="$PROJECT_DIR$/JavaThead/JavaThead.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/SpringBootLearn.iml" filepath="$PROJECT_DIR$/.idea/SpringBootLearn.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spring-boot-resttemplate/spring-boot-resttemplate.iml" filepath="$PROJECT_DIR$/spring-boot-resttemplate/spring-boot-resttemplate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sping-boot-properties/properties.iml" filepath="$PROJECT_DIR$/sping-boot-properties/properties.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-amqp/spring-boot-amqp.iml" filepath="$PROJECT_DIR$/spring-boot-amqp/spring-boot-amqp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-crud/spring-boot-crud.iml" filepath="$PROJECT_DIR$/spring-boot-crud/spring-boot-crud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-demo/spring-boot-demo.iml" filepath="$PROJECT_DIR$/spring-boot-demo/spring-boot-demo.iml" />
     </modules>
   </component>
 </project>

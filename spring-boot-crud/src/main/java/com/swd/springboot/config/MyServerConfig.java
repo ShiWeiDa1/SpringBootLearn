@@ -21,7 +21,7 @@ import java.util.Arrays;
 @Configuration
 public class MyServerConfig {
 
-    //注册三大组件: servlet,filter,listenser
+    // 注册三大组件: servlet,filter,listenser
 
     /**
      * 注册自定义的servlet
@@ -34,7 +34,6 @@ public class MyServerConfig {
         return servletRegistrationBean;
     }
 
-
     /**
      * 注册自定义的filter
      *
@@ -45,7 +44,6 @@ public class MyServerConfig {
         FilterRegistrationBean<Filter> filterFilterRegistrationBean = new FilterRegistrationBean<>();
         filterFilterRegistrationBean.setFilter(new Myfilter());
         filterFilterRegistrationBean.setUrlPatterns(Arrays.asList("/hello", "/myServlet"));
-
 
         return filterFilterRegistrationBean;
 
@@ -73,10 +71,10 @@ public class MyServerConfig {
     @Bean
     public WebServerFactoryCustomizer<ConfigurableWebServerFactory> webServerFactoryCustomizer() {
         return new WebServerFactoryCustomizer<ConfigurableWebServerFactory>() {
-            //定制嵌入式容器的相关规则
+            // 定制嵌入式容器的相关规则
             @Override
             public void customize(ConfigurableWebServerFactory factory) {
-                //设置端口号为
+                // 设置端口号为
                 factory.setPort(8080);
             }
         };

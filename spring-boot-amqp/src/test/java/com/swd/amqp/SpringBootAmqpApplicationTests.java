@@ -32,19 +32,15 @@ public class SpringBootAmqpApplicationTests {
      */
     @Test
     public void createExchange() {
-        //创建一个directExchanger(点对点)
+        // 创建一个directExchanger(点对点)
         amqpAdmin.declareExchange(new DirectExchange("amqpAdmin.exchange"));
 
-        //创建一个名字为amqpAdmin.news的队列
+        // 创建一个名字为amqpAdmin.news的队列
         amqpAdmin.declareQueue(new Queue("amqpAdmin.queue", true));
 
-        //绑定exchange和Queue
-        amqpAdmin.declareBinding(new Binding("amqpAdmin.queue",
-                Binding.DestinationType.QUEUE,
-                "amqpAdmin.exchange",
-                "amqp.hello",
-                null));
-
+        // 绑定exchange和Queue
+        amqpAdmin.declareBinding(
+                new Binding("amqpAdmin.queue", Binding.DestinationType.QUEUE, "amqpAdmin.exchange", "amqp.hello", null));
 
     }
 
@@ -53,23 +49,20 @@ public class SpringBootAmqpApplicationTests {
      */
     @Test
     public void contextLoads() {
-        //需要自己构造message;定义消息内容和消息头
-        //rabbitTemplate.send(AMQP.Exchange,routeKey,message);
+        // 需要自己构造message;定义消息内容和消息头
+        // rabbitTemplate.send(AMQP.Exchange,routeKey,message);
 
-        //object默认当成消息体,只需要传入发送的对象,自动序列化发给rabbitmq
-        //rabbitTemplate.convertAndSend(exchange,routeKey,object);
+        // object默认当成消息体,只需要传入发送的对象,自动序列化发给rabbitmq
+        // rabbitTemplate.convertAndSend(exchange,routeKey,object);
 
         /*
-        //将数据封装成map类型的集合
-        Map<String,Object> map = new HashMap<>();
-        map.put("msg","first data");
-        map.put("data", Arrays.asList("zhangsan",999,"数据"));
-        //对象被默认序列化之后被发送出去
-        rabbitTemplate.convertAndSend("exchange.direct","swd.news",map);
-        */
-        //注入新的对象的序列化机制,使用Jackson2JsonMessageConverter来进行序列化参见MyAMPQConfig.java
+         * //将数据封装成map类型的集合 Map<String,Object> map = new HashMap<>();
+         * map.put("msg","first data"); map.put("data",
+         * Arrays.asList("zhangsan",999,"数据")); //对象被默认序列化之后被发送出去
+         * rabbitTemplate.convertAndSend("exchange.direct","swd.news",map);
+         */
+        // 注入新的对象的序列化机制,使用Jackson2JsonMessageConverter来进行序列化参见MyAMPQConfig.java
         rabbitTemplate.convertAndSend("exchange.direct", "swd.news", new Book("西游记", "吴承恩"));
-
 
     }
 
@@ -88,9 +81,7 @@ public class SpringBootAmqpApplicationTests {
      */
     @Test
     public void sendMsg() {
-        System.out.println(
-                "sendMsg..."
-        );
+        System.out.println("sendMsg...");
         rabbitTemplate.convertAndSend("exchange.fanout", "", new Book("红楼梦", "曹雪芹"));
     }
 

@@ -13,7 +13,7 @@ public class MybatisConfig {
         return new ConfigurationCustomizer() {
             @Override
             public void customize(Configuration configuration) {
-                //开启mybatis的驼峰命名法:如果采用配置文件的方式配置了全局mybatis配置文件,则失效
+                // 开启mybatis的驼峰命名法:如果采用配置文件的方式配置了全局mybatis配置文件,则失效
                 configuration.setMapUnderscoreToCamelCase(true);
             }
         };

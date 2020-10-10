@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
  * @author swd
  */
 @Configuration
-@ConditionalOnWebApplication    //web应用才生效
+@ConditionalOnWebApplication // web应用才生效
 @EnableConfigurationProperties(HelloServiceProperties.class)
 public class HelloServiceAutoConfigration {
 

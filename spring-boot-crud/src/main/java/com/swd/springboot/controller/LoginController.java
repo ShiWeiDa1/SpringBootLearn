@@ -16,10 +16,8 @@ public class LoginController {
     Logger logger = LoggerFactory.getLogger(getClass());
 
     @PostMapping(value = "/user/login")
-    public String login(@RequestParam("username") String username,
-                        @RequestParam("password") String password,
-                        Map<String, Object> map,
-                        HttpSession session) {
+    public String login(@RequestParam("username") String username, @RequestParam("password") String password,
+            Map<String, Object> map, HttpSession session) {
 
         logger.info(username + "=" + password);
 
@@ -27,13 +25,11 @@ public class LoginController {
             session.setAttribute("loginUser", username);
             return "redirect:/main.html";
         } else {
-            //map中放的值,页面能获取
+            // map中放的值,页面能获取
             map.put("msg", "用户名或密码错误!");
             return "login";
         }
 
-
     }
-
 
 }

@@ -22,9 +22,9 @@ public class UserService {
     @initUser
     public void setUserInfoByAop() {
         User user = new User();
-        user.setEseId(2L).setName("").setName("").setName("").setName("").setName("").setName("").setName("").setName("").setName("").setName("");
+        user.setEseId(2L).setName("").setName("").setName("").setName("").setName("").setName("").setName("").setName("")
+                .setName("").setName("");
         System.out.println(user);
     }
-
 
 }

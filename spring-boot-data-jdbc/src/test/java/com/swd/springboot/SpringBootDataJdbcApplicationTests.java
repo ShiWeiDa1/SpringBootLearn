@@ -29,7 +29,6 @@ public class SpringBootDataJdbcApplicationTests {
             e.printStackTrace();
         }
 
-
     }
 
 }

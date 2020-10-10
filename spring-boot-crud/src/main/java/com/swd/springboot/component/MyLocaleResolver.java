@@ -23,17 +23,16 @@ public class MyLocaleResolver implements LocaleResolver {
      */
     @Override
     public Locale resolveLocale(HttpServletRequest request) {
-        //从请求的头部信息中获取信息
+        // 从请求的头部信息中获取信息
         String l = request.getParameter("l");
-        //System.out.println(l);
-        //logger.info(l);
-        //获取本机默认的区域信息
+        // System.out.println(l);
+        // logger.info(l);
+        // 获取本机默认的区域信息
         Locale locale = Locale.getDefault();
         if (!StringUtils.isEmpty(l)) {
             String[] split = l.split("_");
             locale = new Locale(split[0], split[1]);
         }
-
 
         return locale;
     }

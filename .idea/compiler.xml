@@ -8,11 +8,23 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-boot-logback" />
+        <module name="properties" />
         <module name="spring-boot-retry" />
-        <module name="spring-boot-resttemplate" />
+        <module name="spring-boot-amqp" />
+        <module name="spring-boot-demo" />
+      </profile>
+      <profile name="Annotation profile for spring-boot-crud" enabled="true">
+        <sourceOutputDir name="../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-boot-crud" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="properties" target="1.8" />
+      <module name="spring-boot-amqp" target="1.8" />
+      <module name="spring-boot-crud" target="1.5" />
+      <module name="spring-boot-demo" target="1.8" />
       <module name="spring-boot-learn" target="1.8" />
       <module name="spring-boot-logback" target="1.8" />
       <module name="spring-boot-resttemplate" target="1.8" />
@@ -21,6 +33,10 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="properties" options="-parameters" />
+      <module name="spring-boot-amqp" options="-parameters" />
+      <module name="spring-boot-crud" options="-parameters" />
+      <module name="spring-boot-demo" options="-parameters" />
       <module name="spring-boot-learn" options="-parameters" />
       <module name="spring-boot-logback" options="-parameters" />
       <module name="spring-boot-resttemplate" options="-parameters" />

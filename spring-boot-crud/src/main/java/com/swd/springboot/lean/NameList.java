@@ -1,13 +1,12 @@
 package com.swd.springboot.lean;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class NameList {
     private List names = new ArrayList<String>();
 
-    //同步添加name
+    // 同步添加name
     public synchronized void add(String name) {
         names.add(name);
     }
@@ -39,6 +38,5 @@ public class NameList {
             }.start();
         }
     }
-
 
 }

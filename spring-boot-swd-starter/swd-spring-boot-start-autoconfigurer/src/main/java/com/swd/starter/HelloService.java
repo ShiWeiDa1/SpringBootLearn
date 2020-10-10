@@ -1,6 +1,5 @@
 package com.swd.starter;
 
-
 public class HelloService {
 
     HelloServiceProperties helloServiceProperties;

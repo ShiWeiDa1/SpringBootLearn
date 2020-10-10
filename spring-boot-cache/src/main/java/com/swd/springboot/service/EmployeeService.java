@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import javax.crypto.KeyGenerator;
 
-
 /**
  * @CacheConfig:抽取缓存的公共配置
  *      cacheNames = "emp":指定所有的缓存组件的名字
@@ -78,7 +77,7 @@ public class EmployeeService {
      * 如果使用自定义的生成策略,要确保其他操作缓存的key要一致
      */
 
-    @Cacheable(cacheNames = {"emp"})
+    @Cacheable(cacheNames = { "emp" })
     public Employee getEmpById(Integer id) {
         System.out.println("查询员工的id:" + id);
         Employee emp = employeeMapper.getEmpById(id);
@@ -108,7 +107,7 @@ public class EmployeeService {
      * @param employee
      * @return
      */
-    @CachePut(/*value = "emp",*/key = "#result.id")
+    @CachePut(/* value = "emp", */key = "#result.id")
     public Employee updateEmp(Employee employee) {
         System.out.println("update..." + employee);
         employeeMapper.updateEmp(employee);
@@ -136,14 +135,8 @@ public class EmployeeService {
      * @param lastName
      * @return
      */
-    @Caching(
-            cacheable = {
-                    @Cacheable(value = "emp", key = "#lastName")
-            },
-            put = {
-                    @CachePut(value = "emp", key = "#result.id"),
-                    @CachePut(value = "emp", key = "#result.email")
-            }
+    @Caching(cacheable = { @Cacheable(value = "emp", key = "#lastName") }, put = { @CachePut(value = "emp", key = "#result.id"),
+            @CachePut(value = "emp", key = "#result.email") }
 
     )
     public Employee getEmpByLastName(String lastName) {

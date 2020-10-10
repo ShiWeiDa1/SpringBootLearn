@@ -10,7 +10,6 @@ public class Department implements Serializable {
     private Integer id;
     private String departmentName;
 
-
     public Department() {
         super();
         // TODO Auto-generated constructor stub
@@ -42,6 +41,5 @@ public class Department implements Serializable {
     public String toString() {
         return "Department [id=" + id + ", departmentName=" + departmentName + "]";
     }
-
 
 }
