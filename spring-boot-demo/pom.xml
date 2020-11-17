@@ -28,8 +28,8 @@
 
         <dependency>
             <groupId>cn.hutool</groupId>
-            <artifactId>hutool-All</artifactId>
-            <version>5.3.10</version>
+            <artifactId>hutool-all</artifactId>
+            <version>5.4.6</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

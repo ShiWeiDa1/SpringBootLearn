@@ -1,4 +1,4 @@
-package com.regan.thread;
+package com.regan.thread.com.regan.thread;
 
 /**
  *@className: volatileTest
@@ -7,6 +7,7 @@ package com.regan.thread;
  *@date: 2020/4/27 23:06
  *@version: V1.0
  **/
+
 public class VolatileTest {
     // volatile 线程可见性
     // private static volatile boolean FLAG = false;
