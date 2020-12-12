@@ -4,9 +4,7 @@
     <entry key="Project Default">
       <profile-state>
         <expanded-state>
-          <State>
-            <id />
-          </State>
+          <State />
           <State>
             <id>Abstraction issuesJava</id>
           </State>
@@ -17,19 +15,7 @@
             <id>Control flow issuesJava</id>
           </State>
           <State>
-            <id>Google Web Toolkit issues</id>
-          </State>
-          <State>
             <id>Java</id>
-          </State>
-          <State>
-            <id>Logging issuesJava</id>
-          </State>
-          <State>
-            <id>Memory issuesJava</id>
-          </State>
-          <State>
-            <id>Security issuesJava</id>
           </State>
           <State>
             <id>Serialization issuesJava</id>
