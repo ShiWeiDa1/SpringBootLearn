@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-demo/demo.iml" filepath="$PROJECT_DIR$/spring-boot-demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-actuator/spring-boot-actuator.iml" filepath="$PROJECT_DIR$/spring-boot-actuator/spring-boot-actuator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-amqp/spring-boot-amqp.iml" filepath="$PROJECT_DIR$/spring-boot-amqp/spring-boot-amqp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-thread-pool-test/spring-boot-thread-pool-test.iml" filepath="$PROJECT_DIR$/spring-boot-thread-pool-test/spring-boot-thread-pool-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/springDemo.iml" filepath="$PROJECT_DIR$/.idea/springDemo.iml" />
+    </modules>
+  </component>
+</project>

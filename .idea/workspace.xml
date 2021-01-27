@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="184425bd-d45f-4491-8e49-d9f49fc54f99" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/spring-boot-demo/src/main/java/com/regan/demo/apache/io/api/IOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-thread-pool-test/src/main/java/com/regan/alex/config/WebAppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-thread-pool-test/src/main/java/com/regan/alex/constant/TheadNameConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-thread-pool-test/src/main/java/com/regan/alex/properties/ThreadPoolFactoryProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-thread-pool-test/src/main/java/com/regan/alex/web/ThreadTestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-demo/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="local" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\mavenRepo" />
+        <option name="mavenHome" value="D:\codeTool\apache-maven-3.5.0" />
+        <option name="userSettingsFile" value="D:\mavenRepo\top-settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="1.8" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1jYkufksAafwF569CmYggmlzuRp" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="true" />
+    <property name="Repository.Attach.JavaDocs" value="true" />
+    <property name="Repository.Attach.Sources" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ty_project/Ucode/aw" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.122009575" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.regan.demo" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.regan.alex.properties" />
+      <recent name="com.regan.alex.actuator.properties" />
+      <recent name="com.regan.thread.com.regan.model" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8087/v1" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="TestNG.IOTest.getFileNamePrefix">
+    <configuration name="SpringBootThreadPoolApplicationTests.ThreadTest01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-thread-pool-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.regan.alex.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.regan.alex" />
+      <option name="MAIN_CLASS_NAME" value="com.regan.alex.SpringBootThreadPoolApplicationTests" />
+      <option name="METHOD_NAME" value="ThreadTest01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootThreadPoolApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-thread-pool-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.regan.alex.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.regan.alex" />
+      <option name="MAIN_CLASS_NAME" value="com.regan.alex.SpringBootThreadPoolApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AlexApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-thread-pool-test" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.regan.alex.SpringBootThreadPoolApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.regan.demo.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootActuatorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-actuator" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.regan.alex.actuator.SpringBootActuatorApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootAmqpApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-amqp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.swd.amqp.SpringBootAmqpApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IOTest.getFileNamePrefix" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.regan.demo.apache.io.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.regan.demo.apache.io.api" />
+      <option name="MAIN_CLASS_NAME" value="com.regan.demo.apache.io.api.IOTest" />
+      <option name="METHOD_NAME" value="getFileNamePrefix" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IOTest.getTempDirectoryTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.regan.demo.apache.io.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.regan.demo.apache.io.api" />
+      <option name="MAIN_CLASS_NAME" value="com.regan.demo.apache.io.api.IOTest" />
+      <option name="METHOD_NAME" value="getTempDirectoryTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IOTest.writeCollectionToFileTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.regan.demo.apache.io.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.regan.demo.apache.io.api" />
+      <option name="MAIN_CLASS_NAME" value="com.regan.demo.apache.io.api.IOTest" />
+      <option name="METHOD_NAME" value="writeCollectionToFileTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.IOTest.getFileNamePrefix" />
+        <item itemvalue="TestNG.IOTest.writeCollectionToFileTest" />
+        <item itemvalue="TestNG.IOTest.getTempDirectoryTest" />
+        <item itemvalue="JUnit.SpringBootThreadPoolApplicationTests.ThreadTest01" />
+        <item itemvalue="JUnit.SpringBootThreadPoolApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="184425bd-d45f-4491-8e49-d9f49fc54f99" name="Default Changelist" comment="" />
+      <created>1603988638121</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603988638121</updated>
+      <workItem from="1603988639737" duration="219000" />
+      <workItem from="1603988965775" duration="152000" />
+      <workItem from="1603992293635" duration="416000" />
+      <workItem from="1603992726653" duration="402000" />
+      <workItem from="1603993139970" duration="74000" />
+      <workItem from="1603993340680" duration="40000" />
+      <workItem from="1604021958754" duration="37000" />
+      <workItem from="1604215804896" duration="894000" />
+      <workItem from="1604216869461" duration="138000" />
+      <workItem from="1604217512363" duration="457000" />
+      <workItem from="1604218735212" duration="174000" />
+      <workItem from="1604218972447" duration="105000" />
+      <workItem from="1604219085667" duration="57000" />
+      <workItem from="1604219151476" duration="45000" />
+      <workItem from="1604219201771" duration="79000" />
+      <workItem from="1604219777338" duration="114000" />
+      <workItem from="1604219910721" duration="153000" />
+      <workItem from="1604220082986" duration="42000" />
+      <workItem from="1604220135693" duration="5915000" />
+      <workItem from="1604226860777" duration="2453000" />
+      <workItem from="1604983250526" duration="1296000" />
+      <workItem from="1605011593785" duration="1795000" />
+      <workItem from="1605057057496" duration="2156000" />
+      <workItem from="1605073075681" duration="799000" />
+      <workItem from="1605111639922" duration="57000" />
+      <workItem from="1605111708343" duration="691000" />
+      <workItem from="1605146538882" duration="1403000" />
+      <workItem from="1605158938413" duration="695000" />
+      <workItem from="1605195812421" duration="56000" />
+      <workItem from="1605625506993" duration="3898000" />
+      <workItem from="1605667486509" duration="726000" />
+      <workItem from="1607782332995" duration="192000" />
+      <workItem from="1607782580431" duration="1826000" />
+      <workItem from="1607871315427" duration="643000" />
+      <workItem from="1608783199403" duration="14253000" />
+      <workItem from="1608859158262" duration="7178000" />
+      <workItem from="1608965624869" duration="906000" />
+      <workItem from="1609075651673" duration="1222000" />
+      <workItem from="1609118888035" duration="1905000" />
+      <workItem from="1609131435241" duration="311000" />
+      <workItem from="1609940020098" duration="5745000" />
+      <workItem from="1609984504134" duration="6208000" />
+      <workItem from="1610011354802" duration="1189000" />
+      <workItem from="1610068729729" duration="1130000" />
+      <workItem from="1610090941240" duration="80000" />
+      <workItem from="1611125842492" duration="892000" />
+      <workItem from="1611624883432" duration="4328000" />
+      <workItem from="1611652333228" duration="594000" />
+      <workItem from="1611667427700" duration="596000" />
+      <workItem from="1611710692744" duration="4870000" />
+      <workItem from="1611734816998" duration="621000" />
+    </task>
+    <task id="LOCAL-00001" summary="commit">
+      <created>1605625684338</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605625684338</updated>
+    </task>
+    <task id="LOCAL-00002" summary="commit">
+      <created>1607785467619</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607785467619</updated>
+    </task>
+    <task id="LOCAL-00003" summary="commit local">
+      <created>1609940258955</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609940258955</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit" />
+    <MESSAGE value="commit local" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit local" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/springDemo$SynchronizedTest.ic" NAME="SynchronizedTest Coverage Results" MODIFIED="1604226170095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.regan.thread.com.regan.thread.*</FILTER>
+    </SUITE>
+  </component>
+</project>

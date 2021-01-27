@@ -1,0 +1,26 @@
+server:
+  port: 8087
+management:
+  health:
+    rabbit:
+      enabled: false
+    db:
+      enabled: false
+  endpoint:
+    health:
+      #      设置展示信息,默认值为never
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        #        此处 * 不加引号,yml 无法解析
+        include: '*'
+#        那些信息不进行展示
+#        exclude:
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.6.26:3306/mybatis
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
